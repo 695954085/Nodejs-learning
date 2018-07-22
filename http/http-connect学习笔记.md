@@ -65,3 +65,7 @@ cltSocket，是不是有两个消费端，分别是socket，srvSocket？
 - `dest.write(chunk)` dest 正好就是srvSocket，write方法把数据发送到远端
 -  srvSocket重复步骤2，3过程
 -  socket收到cltSocket.write过来的数据
+
+### 改型例子
+
+[例子](https://github.com/695954085/Nodejs-learning/blob/master/js-%E7%BC%96%E7%A8%8B/ClientRequest.js)
