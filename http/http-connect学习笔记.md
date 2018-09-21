@@ -58,9 +58,9 @@ cltSocket，是不是有两个消费端，分别是socket，srvSocket？
 
 ----
 
-- socket.write(chunk) , 不想fs的writeStream一样直接往资源里面写入数据，而是直接写个远端的cltSocket，![1532253862(1).png](http://dn-cnode.qbox.me/Fnoh3GseaLWL5e0hOd-QD-1vbnSZ)
+- socket.write(chunk) , 不想fs的writeStream一样直接往资源里面写入数据，而是直接写个远端的cltSocket，![1532253862(1).png](./1532253862(1).png)
 
-- 远端的cltSocket接受到了数据，触发net.js 的onread方法。cltSokcet接收到socket的chunk之后，触发了`cltSocket.pipe(srvSocket)`绑定的data事件![1532254492(1).png](http://dn-cnode.qbox.me/FhGVbhtvvnMeNeACF1HI-xhAXSwI)
+- 远端的cltSocket接受到了数据，触发net.js 的onread方法。cltSokcet接收到socket的chunk之后，触发了`cltSocket.pipe(srvSocket)`绑定的data事件![1532254492(1).png](./1532254492(1).png)
 
 - `dest.write(chunk)` dest 正好就是srvSocket，write方法把数据发送到远端
 -  srvSocket重复步骤2，3过程
