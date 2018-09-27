@@ -8,7 +8,7 @@
       "type": "node",
       "request": "launch",
       "name": "启动程序",
-      "program": "${workspaceFolder}/js-编程/isValid.js"
+      "program": "${workspaceFolder}/js-编程/twoSum.js"
     }
   ]
 }
